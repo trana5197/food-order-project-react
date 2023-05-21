@@ -1,0 +1,24 @@
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  background-color: #411604;
+
+  padding: 1.2rem 6rem;
+  border-radius: 100px;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  background-color: #dd5a27;
+  padding: 0.3rem 1.5rem;
+  border-radius: 100px;
+}

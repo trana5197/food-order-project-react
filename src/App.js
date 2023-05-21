@@ -1,8 +1,11 @@
+import { Fragment } from "react";
+import MainHeader from "./components/Header/MainHeader";
+
 const App = () => {
   return (
-    <div>
-      <h1>HELLO WORLD</h1>
-    </div>
+    <Fragment>
+      <MainHeader />
+    </Fragment>
   );
 };
 
