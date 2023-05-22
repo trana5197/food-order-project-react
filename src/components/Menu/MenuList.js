@@ -4,7 +4,7 @@ import classes from "./MenuList.module.css";
 
 const MenuList = ({ meal }) => {
   return (
-    <li key={meal.id} className={classes.list}>
+    <li className={classes.list}>
       <div className={classes.meal}>
         <p className={classes.name}>{meal.name}</p>
         <p className={classes.desc}>{meal.desc}</p>

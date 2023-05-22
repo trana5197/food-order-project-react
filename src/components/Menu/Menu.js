@@ -7,7 +7,7 @@ const Menu = ({ meals }) => {
     <Card>
       <ul>
         {meals.map((meal) => {
-          return <MenuList meal={meal} />;
+          return <MenuList meal={meal} key={meal.id} />;
         })}
       </ul>
     </Card>

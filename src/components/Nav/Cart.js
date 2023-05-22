@@ -1,8 +1,8 @@
 import classes from "./Cart.module.css";
 
-const Cart = () => {
+const Cart = (props) => {
   return (
-    <div className={classes.cart}>
+    <div onClick={props.onClick} className={classes.cart}>
       <div className="material-symbols-outlined">shopping_cart</div>
       <div>Your Cart</div>
       <div className={classes.quantity}>
