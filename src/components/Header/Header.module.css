@@ -1,0 +1,12 @@
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-top: -7.1rem;
+
+  width: 175rem;
+  height: 50rem;
+
+  clip-path: polygon(0 14%, 100% 14%, 99% 73%, 0 95%);
+}

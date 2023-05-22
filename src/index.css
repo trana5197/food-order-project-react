@@ -25,3 +25,7 @@ body {
 .heading-tertiary {
   font-size: 3rem;
 }
+
+.margin-bottom-md {
+  margin-bottom: 2rem;
+}

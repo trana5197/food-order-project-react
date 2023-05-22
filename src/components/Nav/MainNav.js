@@ -1,12 +1,12 @@
 import Cart from "./Cart";
 
-import classes from "./MainHeader.module.css";
+import classes from "./MainNav.module.css";
 
 const MainHeader = () => {
   return (
     <section className={classes.header}>
       <div>
-        <h1 className="heading-tertiary">ReactMeals</h1>
+        <h3 className="heading-tertiary">ReactMeals</h3>
       </div>
       <Cart />
     </section>

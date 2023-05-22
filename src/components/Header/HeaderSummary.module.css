@@ -1,0 +1,23 @@
+.summary {
+  width: 78rem;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 9px;
+  padding: 3rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.paragraph {
+  font-size: 1.7rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
