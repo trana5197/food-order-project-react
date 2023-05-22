@@ -30,3 +30,11 @@ body {
 .margin-bottom-md {
   margin-bottom: 2rem;
 }
+
+.margin-bottom-sm {
+  margin-bottom: 1rem;
+}
+
+.margin-left-md {
+  margin-left: 2.5rem;
+}

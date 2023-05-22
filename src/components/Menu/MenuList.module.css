@@ -1,7 +1,12 @@
 .list {
   display: flex;
   justify-content: space-between;
-  padding: 3rem;
+  padding: 3rem 3rem 3rem 1.5rem;
+  width: 95%;
+}
+
+.list:not(:last-child) {
+  border-bottom: 1px solid #ccc;
 }
 
 .meal {
