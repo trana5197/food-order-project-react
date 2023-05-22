@@ -1,0 +1,13 @@
+.card {
+  width: 105rem;
+  height: 50rem;
+  margin: 20rem auto;
+  background-color: #fff;
+  border-radius: 9px;
+
+  overflow: auto;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}

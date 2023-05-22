@@ -1,0 +1,18 @@
+.input {
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.input label {
+  font-weight: 700;
+}
+
+.input input {
+  padding-left: 0.5rem;
+
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

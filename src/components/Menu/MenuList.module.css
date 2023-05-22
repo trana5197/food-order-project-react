@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.meal {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.desc {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.price {
+  color: #c3410e;
+  font-weight: 700;
+}
