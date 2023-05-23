@@ -8,4 +8,6 @@
   padding: 1rem 3rem;
   border-radius: 100px;
   font-size: 1.6rem;
+
+  cursor: pointer;
 }

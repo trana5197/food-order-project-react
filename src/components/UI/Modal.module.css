@@ -10,13 +10,106 @@
 
 .modal {
   position: fixed;
-  top: 20vh;
-  left: 5%;
-  width: 90%;
+  top: 30vh;
+  left: 50%;
+  width: 50%;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 3rem;
+}
+
+.meal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 2.5rem;
+}
+
+.price-amt {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  color: #c3410e;
+
+  margin-bottom: 2rem;
+}
+
+.amt {
+  border: 1px solid #ccc;
+  padding: 0.2rem 1.3rem;
+  border-radius: 5px;
+
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+
+  cursor: pointer;
+}
+
+.button {
+  color: #c3410e;
+  border: 1px solid #c3410e;
+  background: none;
+  font-size: 2.5rem;
+
+  padding: 0.2rem 1.5rem;
+  border-radius: 5px;
+}
+
+.total-amt {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.modal-btns {
+  margin-top: 3rem;
+  margin-left: 56rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-fill {
+  border-radius: 100px;
+  background-color: #6d2408;
+  color: #fff;
+
+  padding: 0.5rem 2rem;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 0.5rem 2rem;
+
+  cursor: pointer;
 }

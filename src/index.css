@@ -38,3 +38,7 @@ body {
 .margin-left-md {
   margin-left: 2.5rem;
 }
+
+.border-bottom {
+  border-bottom: 1px solid #c3410e;
+}
