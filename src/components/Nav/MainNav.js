@@ -11,6 +11,10 @@ const MainNav = () => {
     setDisplayCart(true);
   };
 
+  const closeModalHandler = () => {
+    setDisplayCart(false);
+  };
+
   return (
     <section className={classes.nav}>
       <div>
@@ -18,7 +22,7 @@ const MainNav = () => {
       </div>
 
       <Cart onClick={displayCartHandler} />
-      {displayCart && <Modal />}
+      {displayCart && <Modal onCloseModal={closeModalHandler} />}
     </section>
   );
 };

@@ -5,12 +5,20 @@ import CartContext from "../../store/cart-context";
 
 import classes from "./Modal.module.css";
 
-const Backdrop = () => {
-  return <div className={classes.backdrop}></div>;
+const Backdrop = (props) => {
+  return <div className={classes.backdrop} onClick={props.onCloseModal}></div>;
 };
 
-const Overlay = () => {
+const Overlay = (props) => {
   const cartCtx = useContext(CartContext);
+
+  const addItemHandler = (item) => {
+    cartCtx.addItem(item);
+  };
+
+  const removeItemHandler = (mealId) => {
+    cartCtx.removeItem(mealId);
+  };
 
   return (
     <div className={classes.modal}>
@@ -25,8 +33,25 @@ const Overlay = () => {
               </div>
             </div>
             <div className={classes.buttons}>
-              <button className={classes.button}>&ndash;</button>
-              <button className={classes.button}>+</button>
+              <button
+                className={classes.button}
+                onClick={() => removeItemHandler(meal.id)}
+              >
+                &ndash;
+              </button>
+              <button
+                className={classes.button}
+                onClick={() =>
+                  addItemHandler({
+                    id: meal.id,
+                    name: meal.name,
+                    amount: 1,
+                    price: meal.price,
+                  })
+                }
+              >
+                +
+              </button>
             </div>
           </div>
         );
@@ -34,10 +59,15 @@ const Overlay = () => {
       <div>
         <div className={classes["total-amt"]}>
           <p>Total Amount</p>
-          <p>${cartCtx.totalAmount}</p>
+          <p>${cartCtx.totalAmount.toFixed(2)}</p>
         </div>
         <div className={classes["modal-btns"]}>
-          <button className={`${classes.button} ${classes.btn} `}>Close</button>
+          <button
+            className={`${classes.button} ${classes.btn} `}
+            onClick={props.onCloseModal}
+          >
+            Close
+          </button>
           <button className={`${classes.button}  ${classes["btn-fill"]}`}>
             Order
           </button>
@@ -47,15 +77,15 @@ const Overlay = () => {
   );
 };
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <Backdrop />,
+        <Backdrop onCloseModal={props.onCloseModal} />,
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
-        <Overlay />,
+        <Overlay onCloseModal={props.onCloseModal} />,
         document.getElementById("overlay-root")
       )}
     </Fragment>

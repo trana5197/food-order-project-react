@@ -12,7 +12,9 @@
   position: fixed;
   top: 30vh;
   left: 50%;
-  width: 50%;
+  width: 70rem;
+  height: 50rem;
+  overflow: auto;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
@@ -24,10 +26,14 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2rem;
 
   padding: 3rem;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0.5em;
 }
 
 .meal {
@@ -81,6 +87,8 @@
 
   padding: 0.2rem 1.5rem;
   border-radius: 5px;
+
+  cursor: pointer;
 }
 
 .total-amt {
@@ -93,7 +101,7 @@
 
 .modal-btns {
   margin-top: 3rem;
-  margin-left: 56rem;
+  margin-left: 40rem;
 
   display: flex;
   gap: 2rem;
@@ -105,6 +113,7 @@
   color: #fff;
 
   padding: 0.5rem 2rem;
+  cursor: pointer;
 }
 
 .btn {

@@ -2,11 +2,11 @@ import MenuList from "./MenuList";
 
 import Card from "../UI/Card";
 
-const Menu = ({ meals }) => {
+const Menu = (props) => {
   return (
     <Card>
       <ul>
-        {meals.map((meal) => {
+        {props.meals.map((meal) => {
           return <MenuList meal={meal} key={meal.id} />;
         })}
       </ul>

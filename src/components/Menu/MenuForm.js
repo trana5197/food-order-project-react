@@ -8,20 +8,21 @@ const MenuForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
   const amountRef = useRef("");
 
-  const addItemToCart = () => {
-    const enteredAmount = +amountRef.current.value;
+  const addItemToCart = (e) => {
+    e.preventDefault();
+
+    const enteredAmount = amountRef.current.value;
+    const enteredAmountNumber = +enteredAmount;
 
     if (
       enteredAmount.trim().length === 0 ||
-      enteredAmount < 1 ||
-      enteredAmount > 5
+      enteredAmountNumber < 1 ||
+      enteredAmountNumber > 5
     ) {
       setAmountIsValid(false);
       return;
     }
-    props.onAddItem(+enteredAmount);
-
-    amountRef.current.value = "";
+    props.onAddItem(enteredAmountNumber);
   };
 
   return (
